@@ -1,0 +1,5 @@
+print(bool([]))
+print(bool((1,)))
+print(bool(''))
+print(bool(10))
+print(bool(0))
