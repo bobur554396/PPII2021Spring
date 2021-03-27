@@ -19,7 +19,7 @@ BLUE = (0, 0, 255)
 
 clock = pygame.time.Clock()
 # Frames Per Second
-FPS = 10
+FPS = 60
 
 PI = 3.14
 
@@ -27,8 +27,8 @@ running = True
 
 flag = True
 color = RED
-x, y = 100, 200
-dx, dy = 3, 3
+x, y = 100, 50
+dx, dy = 10, 3
 
 
 # Main program loop
@@ -39,7 +39,7 @@ while running:
       running = False
     elif event.type == pygame.KEYDOWN:
       if event.key == pygame.K_q:
-        running = False
+        running = False1
       elif event.key == pygame.K_SPACE:
         flag = not flag
     elif event.type == pygame.MOUSEBUTTONDOWN:
@@ -50,16 +50,17 @@ while running:
      
   color = RED if flag else BLUE
   x += dx
-  y += dy
+  # y += dy
 
   if x + 100 > SCREEN_WIDHT or x < 0:
     dx *= -1
+    y += 20
     flag = not flag
     if FPS < 90:
       FPS += 10
 
-  if y + 100 > SCREEN_HEIGHT or y < 0:
-    dy *= -1
+  # if y + 100 > SCREEN_HEIGHT or y < 0:
+  #   dy *= -1
 
   screen.fill(WHITE)
   pygame.draw.rect(screen, color, (x, y, 100, 100))

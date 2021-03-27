@@ -34,7 +34,7 @@ while running:
 
   screen.fill(WHITE)
 
-  pygame.draw.line(screen, GREEN, (10, 10), (200, 10), 4)
+  pygame.draw.line(screen, GREEN, (10, 10), (200, 10), 1)
 
   for step in range(20, 50, 10):
     pygame.draw.line(screen, BLUE, (10, step), (200, step), 4)
