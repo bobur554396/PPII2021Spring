@@ -43,6 +43,7 @@ class Food:
     pygame.draw.circle(screen, BLUE, (self.location.x, self.location.y), self.radius)
 
 
+
 class Snake:
   def __init__(self, *args, **kwargs):
     self.radius = 10
